@@ -1,0 +1,183 @@
+html, body, .full, #map{
+    margin: 0;
+    padding:0;
+    height: 100%;
+    width: 100vw;
+  } 
+*{
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: 'treasureMapFont';
+  src: url(../fonts/Treamd.ttf);
+}
+.backgroundFull{
+  width: 100%;
+  /*height: 800px;*/
+  max-height: 100%;
+  background-image: url(../img/background-madera.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-direction: row;
+}
+/***********************************************************************/
+/********************** Pàgina Principal Mapa **************************/
+/***********************************************************************/
+
+  #map {
+    background-color: transparent;
+    overflow: hidden;
+    transition: flex 0.1s linear;
+  }
+  #map .leaflet-map-pane {
+      position: relative;
+      left: 0%;
+      transition: all 1s linear;
+  }
+  .circle{
+    filter: drop-shadow( 0px 0px 3px #000 );
+  } 
+  #botton-info{
+    cursor: pointer;
+    width: 50px; 
+    margin: 20px; 
+    position:absolute;
+    left: 0%; 
+    z-index: 401;
+    visibility: visible;
+    opacity: 1;
+    transition: flex 0.1s, visibility 1s, opacity 0.1s linear;
+  }
+  #little_block_info{
+    color: #ffffff; 
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px; 
+    position:absolute; 
+    bottom: 0; 
+    /*left: calc(50% - 150px);*/ 
+    z-index: 401; 
+    min-width: 250px; 
+    width: fit-content;
+    min-height: 70px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'treasureMapFont';
+  }
+  
+/**************************************************************/
+/******************* Pestanya Informació **********************/
+/**************************************************************/
+
+  #bloc_more_info{
+      background-color: white;
+      width: 0%;
+      height: 100%;
+      position: absolute;
+      z-index: 402;
+      transition: width 1s linear;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+  }
+  #wanted_cartel{
+    overflow: auto;
+    height: 45%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s linear;
+  }
+
+  #wanted_cartel h3{
+    font-family: 'luckiest guy';
+    padding: 20px 0px 0px 20px;
+  }
+
+  #botton-exit {
+    cursor: pointer;
+    width: 20px; 
+    margin: 5px; 
+    position: absolute; 
+    right: 0;
+    padding-top: 15px;
+  }
+
+/************* Autocompletat *********************/
+
+  #autocomplete-container-input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  #autocomplete-container-input input{
+    width: 90%;
+    padding: 10px;
+  }
+  #autocomplete-container-input img {
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 25px;
+    width: 30px;
+  }
+  #autocomplete-container-input img#cross-out{
+    right: 60px;
+    display: none;
+  }
+  #autocomplete-results{
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    list-style-type: none;
+  }
+
+/****************** Selects Anidats ********************/
+
+  #choose_your_beer legend{
+    font-family: 'luckiest guy';
+    padding-left: 20px;
+  }
+  #tipoCerveza, #categoriaCerveza, #estiloCerveza {
+   margin-left: 20px;
+   padding: 10px;
+   min-width: 220px;
+  }
+  #categoriaCerveza, #estiloCerveza {
+    display: none;
+  }
+
+/*************** Blog Info : Resultat ******************/
+
+  #title_style {
+    font-family: 'treasureMapFont'; 
+    color: #cccccc; 
+    font-size: 30px; 
+    padding: 20px;
+    line-height: 32px;
+  }
+  #infoArray{
+    /*display: none; */
+    width: 100%;
+    padding: 0px 20px;
+    font-family: 'Gloria Hallelujah';
+    font-size: 17px;
+  }
+  #result_wanted_cartel {
+    height: 55%;
+    background-color: #000000;
+    color: #cccccc;
+  }
+
+/*********************************************************************************************************/
+/***************************************** Media Responsive **********************************************/
+/*********************************************************************************************************/
+
+@media only screen and (max-width: 768px) {
+  #little_block_info {
+    display: none;
+  }
+}

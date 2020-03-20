@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Beer's Journey: Styles</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/arrayBeerStyles.js"></script>
+    <script type="text/javascript" src="js/arrayBeerStylesInfo.js"></script>
+    <link rel="stylesheet" href="css/map-styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Homemade+Apple|Luckiest+Guy&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+  <div class="row full backgroundFull" id="rowMap">
+    <div id="map" class="col col-sm-12 full">
+     	<!------------------------->
+      <div id="bloc_more_info">
+        <div id="wanted_cartel">
+          <img src="img/cross-out.png" id="botton-exit">
+          <h3 >Beer's Journey</h3>  
+          <div id="autocomplete-container">
+            <div id="autocomplete-container-input">
+              <input type="text" autofocus="true" name="autofocus sample" placeholder="search style" id="autocomplete-input"></input>
+              <img src="img/find.png">
+              <img src="img/cross-out.png" id= "cross-out">
+            </div> 
+            <ul id="autocomplete-results">
+            </ul>
+          </div>
+          <div id="choose_your_beer">
+            <fieldset>
+              <legend>Choose Yours Styles</legend>
+              
+              <label></label>
+              <select id="tipoCerveza" name="tipoCerveza">
+                  <option value="">-- Choose Types of Yeast --</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend></legend>
+              <label></label>
+              <select id="categoriaCerveza" name="categoriaCerveza">
+                  <option value="">-- Choose Family Style --</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend></legend>
+              <label></label>
+              <select id="estiloCerveza" name="estiloCerveza">
+                  <option value="">-- Choose Style --</option>
+              </select>
+            </fieldset>
+          </div>
+        </div>
+        <div id="result_wanted_cartel">
+          <div id="title_style"> 
+          </div>
+          <div id="infoArray">
+          </div>
+        </div>
+      </div>
+       <!------------------------->
+      <img src="img/info.png" id="botton-info" alt="info">
+      <div id="little_block_info">
+      </div>
+    </div>
+  </div>
+
+
+
+<script type="text/javascript" src="js/beer_styles_map.js"></script>
+</body>
+</html>
